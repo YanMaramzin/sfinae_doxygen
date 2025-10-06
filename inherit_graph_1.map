@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,124,105"/>
+<area shape="rect" id="Node000001" href="$structall__same.html" title="Проверяет, все ли типы одинаковы." alt="" coords="217,5,341,31"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="100,71,171,39,216,27,217,32,173,45,102,76"/>
+<area shape="rect" id="Node000002" href="$structis__container.html" title="Проверяет, является ли тип контейнером." alt="" coords="172,55,385,80"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="138,81,171,77,172,83,138,87"/>
+<area shape="rect" id="Node000003" href="$structis__string.html" title="Проверяет, является ли тип строкой (std::string)." alt="" coords="221,104,336,129"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="138,98,221,108,221,113,137,103"/>
+<area shape="rect" id="Node000004" href="$structis__tuple.html" title="Проверяет, является ли тип кортежем (tuple)." alt="" coords="186,153,371,179"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="104,109,173,138,217,151,215,156,171,143,102,114"/>
+</map>
