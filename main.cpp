@@ -6,6 +6,10 @@
 #include <string>
 #include <cstdint>
 
+/**
+ * @brief Проверяет, является ли тип контейнером.
+ * @tparam T Проверяемый тип.
+ */
 template<typename T, typename = void>
 struct is_container : std::false_type {};
 
@@ -17,18 +21,30 @@ struct is_container<T, std::void_t<
             decltype(std::declval<T>().end())>> : std::true_type {};
 
 
+/**
+ * @brief Проверяет, является ли тип строкой (std::string).
+ * @tparam T Проверяемый тип.
+ */
 template<typename T>
 struct is_string : std::false_type {};
 
 template<>
 struct is_string<std::string> : std::true_type {};
 
+/**
+ * @brief Проверяет, является ли тип кортежем (tuple).
+ * @tparam T Проверяемый тип.
+ */
 template<typename T, typename = void>
 struct is_tuple : std::false_type {};
 
 template<typename T>
 struct is_tuple<T, std::void_t<decltype(std::tuple_size<T>::value)> > : std::true_type {};
 
+/**
+ * @brief Проверяет, все ли типы одинаковы.
+ * @tparam Ts Пакет типов для проверки.
+ */
 template<typename... Ts>
 struct all_same : std::false_type {};
 
@@ -40,6 +56,13 @@ struct all_same<T, U, Rest...> :
         std::conditional_t<std::is_same_v<T, U>, all_same<U, Rest...>, std::false_type> {
 };
 
+/**
+ * @brief Печатает целочисленный тип в виде IP-адреса (побайтово).
+ * @tparam T Целочисленный тип.
+ * @param value Значение для вывода.
+ *
+ * Каждый байт выводится через точку, начиная со старшего.
+ */
 template<typename T>
 std::enable_if_t<std::is_integral_v<T> >
 print_ip(T value) {
