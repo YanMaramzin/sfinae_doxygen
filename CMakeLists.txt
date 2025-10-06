@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(sfinae_doxygen main.cpp)
 
-option(WITH_BOOST_TEST "Whether to build Boost test" ON)
+#option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 
 configure_file(version.h.in version.h)
 
